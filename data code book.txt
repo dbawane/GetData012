@@ -1,0 +1,171 @@
+Modified Data Code Book
+=======================
+
+Feature Selection 
+=================
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals.
+
+These time domain signals (post 'time' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. 
+
+Similarly, the acceleration signal was then separated into body and gravity acceleration signals using another low pass Butterworth filter with a corner frequency of 0.3 Hz.
+
+1     body-acceleration-mean()-x-time
+2     body-acceleration-mean()-y-time
+3	body-acceleration-mean()-z-time
+4	body-acceleration-std()-x-time
+5	body-acceleration-std()-y-time
+6	body-acceleration-std()-z-time
+
+7	gravity-acceleration-mean()-x-time
+8	gravity-acceleration-mean()-y-time
+9	gravity-acceleration-mean()-z-time
+10	gravity-acceleration-std()-x-time
+11	gravity-acceleration-std()-y-time
+12	gravity-acceleration-std()-z-time
+
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals.
+
+13    body-acceleration-jerk-mean()-x-time
+14	body-acceleration-jerk-mean()-y-time
+15	body-acceleration-jerk-mean()-z-time
+16	body-acceleration-jerk-std()-x-time
+17	body-acceleration-jerk-std()-y-time
+18	body-acceleration-jerk-std()-z-time
+
+Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm.
+
+19    body-gyro-mean()-x-time
+20    body-gyro-mean()-y-time
+21	body-gyro-mean()-z-time
+22	body-gyro-std()-x-time
+23	body-gyro-std()-y-time
+24	body-gyro-std()-z-time
+25	body-gyro-jerk-mean()-x-time
+26	body-gyro-jerk-mean()-y-time
+27	body-gyro-jerk-mean()-z-time
+28	body-gyro-jerk-std()-x-time
+29	body-gyro-jerk-std()-y-time
+30	body-gyro-jerk-std()-z-time
+31	body-acceleration-magnitude-mean()-time
+32	body-acceleration-magnitude-std()-time
+33	gravity-acceleration-magnitude-mean()-time
+34	gravity-acceleration-magnitude-std()-time
+35	body-acceleration-jerk-magnitude-mean()-time
+36	body-acceleration-jerk-magnitude-std()-time
+37	body-gyro-magnitude-mean()-time
+38	body-gyro-magnitude-std()-time
+39	body-gyro-jerk-magnitude-mean()-time
+40	body-gyro-jerk-magnitude-std()-time
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing frequency domain signals
+
+41    body-acceleration-mean()-x-freq
+42	body-acceleration-mean()-y-freq
+43	body-acceleration-mean()-z-freq
+44	body-acceleration-std()-x-freq
+45	body-acceleration-std()-y-freq
+46	body-acceleration-std()-z-freq
+47	body-acceleration-jerk-mean()-x-freq
+48	body-acceleration-jerk-mean()-y-freq
+49	body-acceleration-jerk-mean()-z-freq
+50	body-acceleration-jerk-std()-x-freq
+51	body-acceleration-jerk-std()-y-freq
+52	body-acceleration-jerk-std()-z-freq
+53	body-gyro-mean()-x-freq
+54	body-gyro-mean()-y-freq
+55	body-gyro-mean()-z-freq
+56	body-gyro-std()-x-freq
+57	body-gyro-std()-y-freq
+58	body-gyro-std()-z-freq
+59	body-acceleration-magnitude-mean()-freq
+60	body-acceleration-magnitude-std()-freq
+61	body-acceleration-jerk-magnitude-mean()-freq
+62	body-acceleration-jerk-magnitude-std()-freq
+63	body-gyro-magnitude-mean()-freq
+64	body-gyro-magnitude-std()-freq
+65	body-gyro-jerk-magnitude-mean()-freq
+66	body-gyro-jerk-magnitude-std()-freq
+
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+All columns list
+================
+
+1     body-acceleration-mean()-x-time
+2	body-acceleration-mean()-y-time
+3	body-acceleration-mean()-z-time
+4	body-acceleration-std()-x-time
+5	body-acceleration-std()-y-time
+6	body-acceleration-std()-z-time
+7	gravity-acceleration-mean()-x-time
+8	gravity-acceleration-mean()-y-time
+9	gravity-acceleration-mean()-z-time
+10	gravity-acceleration-std()-x-time
+11	gravity-acceleration-std()-y-time
+12	gravity-acceleration-std()-z-time
+13	body-acceleration-jerk-mean()-x-time
+14	body-acceleration-jerk-mean()-y-time
+15	body-acceleration-jerk-mean()-z-time
+16	body-acceleration-jerk-std()-x-time
+17	body-acceleration-jerk-std()-y-time
+18	body-acceleration-jerk-std()-z-time
+19	body-gyro-mean()-x-time
+20	body-gyro-mean()-y-time
+21	body-gyro-mean()-z-time
+22	body-gyro-std()-x-time
+23	body-gyro-std()-y-time
+24	body-gyro-std()-z-time
+25	body-gyro-jerk-mean()-x-time
+26	body-gyro-jerk-mean()-y-time
+27	body-gyro-jerk-mean()-z-time
+28	body-gyro-jerk-std()-x-time
+29	body-gyro-jerk-std()-y-time
+30	body-gyro-jerk-std()-z-time
+31	body-acceleration-magnitude-mean()-time
+32	body-acceleration-magnitude-std()-time
+33	gravity-acceleration-magnitude-mean()-time
+34	gravity-acceleration-magnitude-std()-time
+35	body-acceleration-jerk-magnitude-mean()-time
+36	body-acceleration-jerk-magnitude-std()-time
+37	body-gyro-magnitude-mean()-time
+38	body-gyro-magnitude-std()-time
+39	body-gyro-jerk-magnitude-mean()-time
+40	body-gyro-jerk-magnitude-std()-time
+41	body-acceleration-mean()-x-freq
+42	body-acceleration-mean()-y-freq
+43	body-acceleration-mean()-z-freq
+44	body-acceleration-std()-x-freq
+45	body-acceleration-std()-y-freq
+46	body-acceleration-std()-z-freq
+47	body-acceleration-jerk-mean()-x-freq
+48	body-acceleration-jerk-mean()-y-freq
+49	body-acceleration-jerk-mean()-z-freq
+50	body-acceleration-jerk-std()-x-freq
+51	body-acceleration-jerk-std()-y-freq
+52	body-acceleration-jerk-std()-z-freq
+53	body-gyro-mean()-x-freq
+54	body-gyro-mean()-y-freq
+55	body-gyro-mean()-z-freq
+56	body-gyro-std()-x-freq
+57	body-gyro-std()-y-freq
+58	body-gyro-std()-z-freq
+59	body-acceleration-magnitude-mean()-freq
+60	body-acceleration-magnitude-std()-freq
+61	body-acceleration-jerk-magnitude-mean()-freq
+62	body-acceleration-jerk-magnitude-std()-freq
+63	body-gyro-magnitude-mean()-freq
+64	body-gyro-magnitude-std()-freq
+65	body-gyro-jerk-magnitude-mean()-freq
+66	body-gyro-jerk-magnitude-std()-freq
+67	activity
+68	subject
+
+The set of variables that were estimated from these signals are: 
+
+mean(): Mean value
+std(): Standard deviation
+
