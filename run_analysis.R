@@ -17,7 +17,7 @@ if (!file.exists("data/UCI HAR Dataset.zip")) {
       download.file(file_url, destfile="data/UCI HAR Dataset.zip", method="curl")
       
 }
-# Check fif unziped otherwise upzip it
+# Check file unziped otherwise upzip it
 if (!file.exists("UCI HAR Dataset")) {
       unzip("data/UCI HAR Dataset.zip")
 }
@@ -72,7 +72,7 @@ req_data$Activity <- factor(req_data$Activity, levels=activity_labels$V1, labels
 #4. Appropriately labels the data set with descriptive variable names.
 
 disc_name <- colnames(req_data)
-disc_name <- gsub("\\(\\)", "", name_col)
+#disc_name <- gsub("\\(\\)", "", name_col)
 disc_name <- gsub("Acc", "-acceleration", disc_name)
 disc_name <- gsub("Mag", "-magnitude", disc_name)
 disc_name <- gsub("(Jerk|Gyro)", "-\\1", disc_name)
@@ -92,3 +92,4 @@ tidy_data_set <- ddply(req_data, c("subject", "activity"), numcolwise(mean))
 write.table(tidy_data_set, file="tidy_data_set.txt", row.name=FALSE)
 
 #END
+
